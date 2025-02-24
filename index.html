@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>战略性新兴产业分类表</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 原有表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .hoverable {
+            color: deepskyblue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .hoverable:hover {
+            color: darkblue;
+        }
+
+        .hover-tooltip {
+            position: absolute;
+            display: none;
+            background-color: #333;
+            color: #fff;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 搜索区域样式 */
+        .search-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">战略性新兴产业分类与国际专利分类</h1>
+    <h2 style="text-align: center;">参照关系表（2021）（试行）</h2>
+
+    <!-- 搜索组件 -->
+    <div class="search-section">
+        <div id="searchContainer"></div>
+    </div>
+
+    <section>
+        <h3>一、制定目的</h3>
+        <p>为贯彻落实党的十九届五中全会关于发展战略性新兴产业部署要求，加强战略性新兴产业专利分析及动向监测，满足战略性新兴产业专利活动的统计需要，制定本参照关系表。</p>
+        <p>本参照关系表适用于对“十三五”国家战略性新兴产业专利发展状况进行宏观统计监测；适用于各地方、有关部门开展相关产业专利统计监测工作。</p>
+    </section>
+
+    <section>
+        <h3>二、编制原则</h3>
+        <p>（一）以国家规划文件为依据。以国务院《关于印发“十三五”国家知识产权保护和运用规划的通知》（国发〔2016〕86号）为指导，根据《“十三五”国家战略性新兴产业发展规划》，确定编制思路和框架设计，明确适用范围。</p>
+        <p>（二）实现产业直接对照。把握专利分类专业特点，将国际专利分类直接与战略性新兴产业分类进行对照，为实现战略性新兴产业专利与经济活动的关联分析提供统计依据。</p>
+        <p>（三）确保产业全面覆盖。覆盖战略性新兴产业全部领域，实现与国际专利分类的全面对照关系。</p>
+        <p>（四）应用位置优先原则。新一代信息技术、新材料等基础技术涉及的分类号，可同时应用在高端装备制造产业、生物、新能源汽车、新能源、节能环保、数字创意和相关服务业等产业的，优先对照至该应用位置。</p>
+        <p>（五）注重实际可操作性。按照技术相关度，将国际专利分类对照至最相关且唯一的战略性新兴产业分类位置，便于统计使用。</p>
+        <p>（六）具有动态可调整性。可随着国家战略性新兴产业分类、国际专利分类的调整以及关键核心技术领域发展实现适应性调整。</p>
+    </section>
+
+    <section>
+        <h3>三、参照范围</h3>
+        <p>针对新一代信息技术产业、高端装备制造产业、新材料产业、生物产业、新能源汽车产业、新能源产业、节能环保产业、数字创意产业、相关服务业等9大战略性新兴产业领域以及脑科学、量子信息和区块链等关键核心技术领域，建立与国际专利分类的参照关系。经合并去重，共建立关系 1872 条，涉及国际专利分类表 8 个部、89 个大类、317 个小类、2893个大组、35473 个小组。</p>
+    </section>
+
+    <section>
+        <h3>四、有关说明</h3>
+        <p>（一）战略性新兴产业均对应一个或多个国际专利分类，表示该国际专利分类下专利与所述战略性新兴产业相关；所述国际专利分类对应的关键词是对该分类的进一步限定，以实现更为准确的统计。</p>
+        <p>（二）国际专利分类号后加“*”表示包括国际专利分类该层级及以下所有分类号，对于需排除的分类号加括号予以说明。</p>
+        <p>（三）编制使用《国际专利分类表（IPC 2020.01）》《战略性新兴产业分类（2018）》和《战略性新兴产业重点产品和服务指导目录（2016）》，参考《2017年国民经济行业分类》(GB/T 4754—2017)和《2017国民经济行业分类注释》（网络版）。战略性新兴产业第一、二层分类代码及名称相关表述均与《战略性新兴产业分类（2018）》相一致。</p>
+    </section>
+
+    <section>
+        <h3>五、战略性新兴产业分类与国际专利分类参照关系表</h3>
+        <table class="industry-table">
+            <thead>
+                <tr>
+                    <th>战略性新兴产业分类</th>
+                    <th>战略性新兴产业名称</th>
+                    <th>国际专利分类</th>
+                    <th>关键词概述</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+
+        <!-- 悬浮提示框 -->
+        <div class="hover-tooltip" id="tooltip"></div>
+    </section>
+
+    <!-- 先引入 data.js -->
+    <script src="data.js"></script>
+
+    <!-- 然后是主脚本 -->
+    <script>
+        // 从 data.js 中获取数据
+        const tableData = window.tableData;  // 使用 data.js 中定义的数据
+        const ipcData = window.ipcData;      // 使用 data.js 中定义的数据
+
+        // 搜索组件类
+        class SearchComponent {
+            constructor(container) {
+                this.container = container;
+                this.init();
+            }
+
+            init() {
+                // 创建搜索框和结果容器
+                this.container.innerHTML = `
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" placeholder="请输入分类号或关键词..." class="search-input">
+                            <button class="search-button">搜索</button>
+                        </div>
+                        <div class="search-results"></div>
+                    </div>
+                `;
+
+                // 获取DOM元素
+                this.input = this.container.querySelector('.search-input');
+                this.button = this.container.querySelector('.search-button');
+                this.resultsContainer = this.container.querySelector('.search-results');
+
+                // 绑定事件
+                this.button.addEventListener('click', () => this.handleSearch());
+                this.input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.handleSearch();
+                });
+            }
+
+            handleSearch() {
+                const query = this.input.value.trim();
+                if (!query) return;
+
+                // 使用 window.searchAll 函数进行搜索
+                const results = window.searchAll(query);
+                this.displayResults(results);
+            }
+
+            displayResults(results) {
+                if (results.length === 0) {
+                    this.resultsContainer.innerHTML = '<div class="no-results">未找到相关结果</div>';
+                    return;
+                }
+
+                const html = results.map(result => {
+                    if (result.type === 'ipc') {
+                        return `
+                            <div class="result-item" data-code="${result.code}">
+                                <div class="result-title">${result.title}</div>
+                                <div class="result-match">匹配类型: ${result.matchType}</div>
+                                <div class="result-desc">${result.description}</div>
+                            </div>
+                        `;
+                    } else {
+                        return `
+                            <div class="result-item" data-id="${result.id}">
+                                <div class="result-title">${result.industry}</div>
+                                <div class="result-match">匹配类型: ${result.matchType}</div>
+                            </div>
+                        `;
+                    }
+                }).join('');
+
+                this.resultsContainer.innerHTML = html;
+
+                // 为搜索结果添加点击事件
+                this.resultsContainer.querySelectorAll('.result-item').forEach(item => {
+                    item.addEventListener('click', () => this.handleResultClick(item));
+                });
+            }
+
+            handleResultClick(item) {
+                const code = item.dataset.code;
+                const id = item.dataset.id;
+                const searchText = this.input.value.trim();
+                
+                // 移除所有现有的高亮
+                document.querySelectorAll('.match-highlight').forEach(el => {
+                    el.replaceWith(el.textContent);
+                });
+                
+                if (code) {
+                    // 跳转到IPC分类号位置
+                    const element = document.querySelector(`[data-ipc="${code}"]`);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        this.highlightText(element.closest('tr'), searchText);
+                    }
+                } else if (id) {
+                    // 跳转到产业分类位置
+                    const element = document.querySelector(`[data-industry="${id}"]`);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        this.highlightText(element, searchText);
+                    }
+                }
+
+                // 清空搜索结果
+                this.resultsContainer.innerHTML = '';
+            }
+
+            // 修改 highlightText 方法
+            highlightText(element, searchText) {
+                if (!searchText) return;
+                
+                const highlightMatch = (text) => {
+                    const regex = new RegExp(`(${searchText})`, 'gi');
+                    return text.replace(regex, '<span class="match-highlight">$1</span>');
+                };
+
+                // 处理普通文本
+                const processTextNodes = (node) => {
+                    if (node.nodeType === 3) { // 文本节点
+                        if (node.textContent.toLowerCase().includes(searchText.toLowerCase())) {
+                            const span = document.createElement('span');
+                            span.innerHTML = highlightMatch(node.textContent);
+                            node.parentNode.replaceChild(span, node);
+                        }
+                    } else if (node.nodeType === 1) { // 元素节点
+                        if (node.classList && !node.classList.contains('hoverable')) {
+                            Array.from(node.childNodes).forEach(child => processTextNodes(child));
+                        }
+                    }
+                };
+
+                // 处理 hoverable 元素
+                const processHoverableElements = (node) => {
+                    const hoverables = node.querySelectorAll('.hoverable');
+                    hoverables.forEach(hoverable => {
+                        if (hoverable.textContent.toLowerCase().includes(searchText.toLowerCase())) {
+                            const originalHTML = hoverable.outerHTML;
+                            const highlightedText = highlightMatch(hoverable.textContent);
+                            hoverable.innerHTML = highlightedText;
+                        }
+                    });
+                };
+
+                // 先处理 hoverable 元素
+                processHoverableElements(element);
+                // 然后处理其他文本
+                processTextNodes(element);
+            }
+        }
+
+        // 格式化IPC代码
+        function formatIPCCodes(ipcString) {
+            if (!ipcString) return "";
+            return ipcString.replace(/([A-Z]\d{2,}[A-Z]?\d*(\/\d+)?\*?)/g,
+                '<span class="hoverable" data-ipc="$1" data-code="$1">$1</span>'
+            );
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Data loaded:', window.tableData); // 调试用
+            
+            // 初始化搜索组件
+            const searchContainer = document.getElementById('searchContainer');
+            new SearchComponent(searchContainer);
+
+            // 渲染表格
+            const tableBody = document.getElementById("table-body");
+            if (!tableBody) {
+                console.error('Table body element not found');
+                return;
+            }
+
+            if (!window.tableData) {
+                console.error('Table data not loaded');
+                return;
+            }
+
+            tableBody.innerHTML = "";
+            window.tableData.forEach(item => {
+                const row = document.createElement("tr");
+                row.setAttribute('data-industry', item.id);
+                row.innerHTML = `
+                    <td>${item.id || ''}</td>
+                    <td>${item.industry || ''}</td>
+                    <td>${formatIPCCodes(item.ipc || '')}</td>
+                    <td>${item.keywords || ''}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            // 悬浮提示框逻辑
+            const tooltip = document.getElementById("tooltip");
+            
+            document.body.addEventListener('mouseover', (event) => {
+                if (event.target.classList.contains('hoverable')) {
+                    const code = event.target.getAttribute('data-code');
+                    if (ipcData[code]) {
+                        const data = ipcData[code];
+                        let content = `<strong>${data.title}</strong><br>`;
+                        data.hierarchy.forEach(item => {
+                            content += `${item.code}: ${item.description}<br>`;
+                        });
+                        tooltip.innerHTML = content;
+                        tooltip.style.display = 'block';
+                    }
+                }
+            });
+
+            document.body.addEventListener('mousemove', (event) => {
+                tooltip.style.left = event.pageX + 10 + 'px';
+                tooltip.style.top = event.pageY + 10 + 'px';
+            });
+
+            document.body.addEventListener('mouseout', (event) => {
+                if (event.target.classList.contains('hoverable')) {
+                    tooltip.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
